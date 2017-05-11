@@ -26,25 +26,25 @@ history.listen((location, action) => {
 Inferno.render(<App history={history}/>, root)
 
 // cache all assets if browser supports serviceworker
-if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
-    const sw = navigator.serviceWorker
+// if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
+//     const sw = navigator.serviceWorker
 
-	sw.register('/offline.js').then(function () {
-        console.debug('ServiceWorker: registered')
-    }).catch(function(err) {
-        console.error('ServiceWorker:', err)
-    })
+// 	sw.register('/offline.js').then(function () {
+//         console.debug('ServiceWorker: registered')
+//     }).catch(function(err) {
+//         console.error('ServiceWorker:', err)
+//     })
 
-    /*sw.register('/sw.js').then(function() {
-        console.debug('CDN Worker: registered')
-    }).catch(function(err) {
-        console.error('ServiceWorker:', err)
-    })*/
+//     /*sw.register('/sw.js').then(function() {
+//         console.debug('CDN Worker: registered')
+//     }).catch(function(err) {
+//         console.error('ServiceWorker:', err)
+//     })*/
 
-    sw.ready.then(function(registration) {
-        console.debug('Worker: ready')
-    })
-}
+//     sw.ready.then(function(registration) {
+//         console.debug('Worker: ready')
+//     })
+// }
 
 if (module.hot) {
     module.hot.accept()

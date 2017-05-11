@@ -4,7 +4,7 @@ const pubDir = join(__dirname, '../../public')
 
 module.exports = {
     http: {
-        port: process.env.DEV ? 8080 : 8050,
+        port: process.env.DEV ? 8888 : 8050,
         favicon: join(__dirname, '../assets/favicon.ico')
     },
     server: {

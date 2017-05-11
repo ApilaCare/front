@@ -58,7 +58,7 @@ export default class Header extends Component {
                 </div>
                 <MenuLink to="/" className="branding lg3 sm3"><ApilaLogo/> Apila</MenuLink>
                 <nav className={ 'lg9 sm9 ' + (this.state.active ? 'open' : 'closed') }>
-                    <MenuLink to="/">Home</MenuLink>
+                    <MenuLink to="/front">Home</MenuLink>
                     <MenuLink to="/about">About</MenuLink>
                     <MenuLink to="/Pricing">Pricing</MenuLink>
                     <MenuLink to="/docs/guides/installation">Docs</MenuLink>

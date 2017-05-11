@@ -18,7 +18,7 @@ function Wrap(props) {
 //<Route path="/demo" component={ DemoInferno }/>
 export default (
     <Route component={ Layout }>
-        <IndexRoute component={ Home }/>
+        <Route path="/front" component={ Home }/>
         <Route path="/docs/:path*" component={ Docs }/>
         <Route path="/docs" component={ Docs }/>
         <Route path="/about" component={ About }/>

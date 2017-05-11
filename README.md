@@ -14,9 +14,16 @@ For development:
 
     npm run dev
 
+    navigate to http://localhost:8888/front 
+
 For production:
 
     npm run prod
+
+## How to deploy
+
+ Run the `npm run prod` and then copy everything in the /public folder and paste that
+ to the deploy/front folder
     
 ## Requirements
 
