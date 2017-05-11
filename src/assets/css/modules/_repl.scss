@@ -1,0 +1,35 @@
+.repl {
+    .repl-editor {
+        position: relative;
+        border: 1px solid #ccc;
+        min-height: 6rem;
+    }
+    .repl-output {
+        position: relative;
+        border: 1px solid #ccc;
+        background: #fff;
+        padding: 1rem !important;
+        min-height: 6rem;
+    }
+    .hidden {
+        visibility: hidden;
+    }
+    button {
+        display: block;
+        margin: 1rem auto;
+    }
+    .CodeMirror {
+        font-size: 0.85rem;
+        pre {
+            @include media-query($on-small) {
+                font-size: 13px;
+            }
+        }
+    }
+    .CodeMirror-linenumber {
+        color: black !important;
+    }
+    .CodeMirror-line .cm-comment {
+        color: #4e4e4e;
+    }
+}

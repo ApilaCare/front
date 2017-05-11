@@ -1,0 +1,19 @@
+# APP
+node_modules
+public/
+build/
+data/
+uploads/
+stats.json
+
+# Other
+INFERNOJS_SECRET
+*.pem
+*.log
+*.db
+.idea
+.DS_Store
+*.map
+.sass-cache/*
+.TemporaryItems/*
+.vscode
