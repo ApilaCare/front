@@ -1,20 +1,28 @@
-import Inferno from 'inferno'
-import Component from 'inferno-component'
-import { Router, match } from 'inferno-router'
-import onEnter from '../../core/helpers/onEnter'
-import routes from '../routes'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link, IndexLink } from 'react-router';
 
-export default class App extends Component {
-    componentDidMount() {
-        const { history } = this.props
-
-        // Fetch data on route change
-        history.listen(location => onEnter(match(routes, location)))
-    }
-
-    render({ history }) {
-        return <Router history={history}>
-            {routes}
-        </Router>
-    }
+// This is a class-based component because the current
+// version of hot reloading won't hot reload a stateless
+// component at the top-level.
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <IndexLink to="/">Home</IndexLink>
+        {' | '}
+        <Link to="/fuel-savings">Demo App</Link>
+        {' | '}
+        <Link to="/about">About</Link>
+        <br/>
+        {this.props.children}
+      </div>
+    );
+  }
 }
+
+App.propTypes = {
+  children: PropTypes.element
+};
+
+export default App;
