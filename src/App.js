@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import './App.css';
+import Menu from './menu/Menu';
 
 class App extends Component {
   render() {
@@ -8,12 +9,12 @@ class App extends Component {
     const { main, sidebar} = this.props;
 
     return (
-      <div id="wrapper">
+      <div>
         <div>
-          { sidebar }
+          <Menu />
         </div>
         <div>
-          { main }
+          { this.props.children }
         </div>
       </div>
     );

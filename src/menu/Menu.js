@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Menu.css';
 
+import { Link } from 'react-router';
+
 class Menu extends Component {
 
 
@@ -21,13 +23,13 @@ class Menu extends Component {
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul className="nav navbar-nav">
                     <li>
-                        <a href="/">Home</a>
+                        <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <a href="/docs">Docs</a>
+                        <Link to="/Docs">Docs</Link>
                     </li>
                     <li>
-                        <a href="/about">About</a>
+                        <Link to="/About">About</Link>
                     </li>
                 </ul>
             </div>

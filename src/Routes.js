@@ -13,9 +13,8 @@ import Docs from './docs/Docs';
 const Routes = (props) => (
   <Router {...props}>
     <Route path="/" component={ App } >
-      <IndexRoute components={{ main:Home, sidebar:Menu }} />
-      <Route path="/docs" components={{ main:Docs, sidebar:Menu }} />
-      <Route path="/about" components={{ main:About, sidebar:Menu }} />
+      <Route path="docs" components={ Docs } />
+      <Route path="about" components={ About } />
     </Route>
     <Route path="/register" component={ Register } />
     <Route path="/login" component={ Login } />
