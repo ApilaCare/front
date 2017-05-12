@@ -5,14 +5,13 @@ import App from './App';
 import Register from './register/Register';
 import Login from './login/Login';
 import Home from './home/Home';
-import Menu from './menu/Menu';
-
 import About from './about/About';
 import Docs from './docs/Docs';
 
 const Routes = (props) => (
   <Router {...props}>
     <Route path="/" component={ App } >
+      <IndexRoute component={ Home } />
       <Route path="docs" components={ Docs } />
       <Route path="about" components={ About } />
     </Route>

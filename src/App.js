@@ -6,8 +6,6 @@ import Menu from './menu/Menu';
 class App extends Component {
   render() {
 
-    const { main, sidebar} = this.props;
-
     return (
       <div>
         <div>
