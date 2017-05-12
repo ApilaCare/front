@@ -17,6 +17,15 @@ class Docs extends Component {
         };
     }
 
+    componentDidMount() {
+        let hash = window.location.hash;
+
+        if(hash) {
+            hash = hash.substring(1);
+            this.changeCategory(hash);
+        }
+    }
+
     changeCategory = (cat) => {
 
         let selected = '';
@@ -24,14 +33,17 @@ class Docs extends Component {
         switch(cat) {
             case 'Home':
                 selected = HomeMd;
+                window.location.hash = 'Home';
             break;
 
             case 'Issues':
                 selected = IssuesMd;
+                window.location.hash = 'Issues';
             break;
 
             case 'Residents':
                 selected = ResidentsMd;
+                window.location.hash = 'Residents';
             break;
 
             default:
